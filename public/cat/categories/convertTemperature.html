@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/unit_conversion.css">
+    <link rel="icon" href="../../img/CM.png" type="image/png">
+    <link rel="alternate" hreflang="ca" href="../../cat/categories/convertTemperature.html">
+    <link rel="alternate" hreflang="en" href="../../eng/categories/convertTemperature.html">
+    <link rel="alternate" hreflang="pt" href="../../por/categories/convertTemperature.html">
+    <link rel="alternate" hreflang="fr" href="../../fra/categories/convertTemperature.html">
+    <link rel="alternate" hreflang="es" href="../../esp/categories/convertTemperature.html">
+    <title>Convertmon - Temperatura</title>
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="languages">
+            <a href="../../cat/categories/convertTemperature.html">Català</a>
+            <a href="../../eng/categories/convertTemperature.html">English</a>
+            <a href="../../por/categories/convertTemperature.html">Português</a>
+            <a href="../../fra/categories/convertTemperature.html">Français</a>
+            <a href="../../esp/categories/convertTemperature.html">Español</a>
+        </nav>
+
+        <div class="title">
+            <h1><a href="../index_cat.html">CONVERTMON</a></h1>
+        </div>
+
+        <div class="title_family">
+            <h2>TEMPERATURA</h2>
+        </div>
+
+    </header>
+
+    <div class="father">
+
+        <main>
+
+            <form id="converterForm">
+
+                <input type="number" id="text" step="any" inputmode="decimal">
+                <br>
+                <select name="temperature1" id="temperature1"></select>
+
+                <label for="text">a</label>
+
+                <select name="temperature2" id="temperature2"></select>
+
+                <button id="button" type="submit">Convertir</button>
+
+            </form>
+
+            <div id="results"></div>
+
+            <div id="image1">
+                <img src="../../img/img1.jpg" alt="Unitats de mesura" width="650" height="200"
+                    loading="lazy">
+            </div>
+
+        </main>
+
+        <div class="column">
+            <aside id="lateral">
+                <nav>
+                    <ul id="menu">
+                        <li><a class="units" href="convertBandwidth.html">Ample de banda</a></li>
+                        <li><a class="units" href="convertArea.html">Àrea</a></li>
+                        <li><a class="units" href="convertComputerDataStorage.html">Emmagatzematge de dades</a></li>
+                        <li><a class="units" href="convertEnergy.html">Energia</a></li>
+                        <li><a class="units" href="convertForce.html">Força</a></li>
+                        <li><a class="units" href="convertElectricCurrent.html">Intensitat elèctrica</a>
+                        <li><a class="units" href="convertLength.html">Longitud</a></li>
+                        <li><a class="units" href="convertMass.html">Pes</a></li>
+                        <li><a class="units" href="convertPressure.html">Pressió</a></li>
+                        <li><a class="units" href="convertTemperature.html">Temperatura</a></li>
+                        <li><a class="units" href="convertTime.html">Temps</a></li>
+                        <li><a class="units" href="convertVoltage.html">Tensió elèctrica</a></li>
+                        <li><a class="units" href="convertSpeed.html">Velocitat</a></li>
+                        <li><a class="units" href="convertVolume.html">Volum</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div id="image2">
+                <img src="../../img/img2.jpg" alt="Unitats de mesura" width="250" height="450"
+                    loading="lazy">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+
+        <a href="../policy_cat.html">Avís Legal</a>
+        <a href="../policy_cat.html">Política de Galetes</a>
+
+    </footer>
+
+    <script>
+
+        document.getElementById("converterForm").addEventListener("submit", e => { e.preventDefault(); check(); });
+
+        let units = [];
+        let translations = {};
+
+        // Carrega el JSON de llenguatge
+        fetch("../../../data/lang_cat.json")
+            .then(r => r.json())
+            .then(data => { translations = data.units; });
+
+        // Carrega el JSON
+        fetch("../../../data/units_data.json")
+            .then(r => r.json())
+            .then(data => {
+                units = data; // guarda el JSON globalment
+
+                // Filtra només les unitats de categoria "temperature"
+                const temperatureUnits = data.filter(x => x.category === "temperature");
+
+                // Extreu els noms únics
+                const unitNames = [...new Set(temperatureUnits.map(x => x.from))];
+
+                unitNames.sort();
+
+                const select1 = document.getElementById("temperature1");
+                const select2 = document.getElementById("temperature2");
+
+                unitNames.forEach(u => {
+                    select1.innerHTML += `<option value="${u}">${translations[u]}</option>`;
+                    select2.innerHTML += `<option value="${u}">${translations[u]}</option>`;
+                });
+            });
+
+
+        function check() {
+
+            const unit1 = document.getElementById("temperature1").value;
+            const unit2 = document.getElementById("temperature2").value;
+
+            const value = parseFloat(document.getElementById("text").value);
+
+            if (isNaN(value)) {
+                document.getElementById("results").innerHTML = "Si us plau, entra un número vàlid.";
+                return;
+            }
+
+            const entry = units.find(x => x.from === unit1 && x.to === unit2);
+
+            if (!entry) {
+                document.getElementById("results").innerHTML = "Conversió no trobada.";
+                return;
+            }
+
+            const factor = entry.factor;
+            const offset = entry.offset || 0;
+
+            const result = value * factor + offset;
+
+            document.getElementById("results").innerHTML =
+                `${value} ${translations[unit1].toUpperCase()} = ${result} ${translations[unit2].toUpperCase()}`;
+        }
+
+    </script>
+</body>
+
+</html>

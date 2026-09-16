@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/unit_conversion.css">
+    <link rel="icon" href="../../img/CM.png" type="image/png">
+    <link rel="alternate" hreflang="ca" href="../../cat/categories/convertForce.html">
+    <link rel="alternate" hreflang="en" href="../../eng/categories/convertForce.html">
+    <link rel="alternate" hreflang="pt" href="../../por/categories/convertForce.html">
+    <link rel="alternate" hreflang="fr" href="../../fra/categories/convertForce.html">
+    <link rel="alternate" hreflang="es" href="../../esp/categories/convertForce.html">
+    <title>Convertmon - Force</title>
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="languages">
+            <a href="../../cat/categories/convertForce.html">Català</a>
+            <a href="../../eng/categories/convertForce.html">English</a>
+            <a href="../../por/categories/convertForce.html">Português</a>
+            <a href="../../fra/categories/convertForce.html">Français</a>
+            <a href="../../esp/categories/convertForce.html">Español</a>
+        </nav>
+
+        <div class="title">
+            <h1><a href="../index_fra.html">CONVERTMON</a></h1>
+        </div>
+
+        <div class="title_family">
+            <h2>FORCE</h2>
+        </div>
+
+    </header>
+
+    <div class="father">
+
+        <main>
+
+            <form id="converterForm">
+
+                <input type="number" id="text" step="any" inputmode="decimal">
+                <br>
+                <select name="force1" id="force1"></select>
+
+                <label for="text">en</label>
+
+                <select name="force2" id="force2"></select>
+
+                <button id="button" type="submit">Convertir</button>
+
+            </form>
+
+            <div id="results"></div>
+
+            <div id="image1">
+                <img src="../../img/img1.jpg" alt="Unités de mesure" width="650" height="200"
+                    loading="lazy">
+            </div>
+
+        </main>
+
+        <div class="column">
+            <aside id="lateral">
+                <nav>
+                    <ul id="menu">
+                        <li><a class="units" href="convertBandwidth.html">Bande passante</a></li>
+                        <li><a class="units" href="convertElectricCurrent.html">Courant électrique</a>
+                        <li><a class="units" href="convertEnergy.html">Énergie</a></li>
+                        <li><a class="units" href="convertForce.html">Force</a></li>
+                        <li><a class="units" href="convertLength.html">Longueur</a></li>    
+                        <li><a class="units" href="convertMass.html">Masse</a></li>
+                        <li><a class="units" href="convertComputerDataStorage.html">Mesures imformatiques</a></li>
+                        <li><a class="units" href="convertVoltage.html">Potentiel électrique</a></li>
+                        <li><a class="units" href="convertPressure.html">Pression</a></li>
+                        <li><a class="units" href="convertArea.html">Superficie</a></li>
+                        <li><a class="units" href="convertTemperature.html">Température</a></li>
+                        <li><a class="units" href="convertTime.html">Temps</a></li>
+                        <li><a class="units" href="convertSpeed.html">Vitesse</a></li>
+                        <li><a class="units" href="convertVolume.html">Volume</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div id="image2">
+                <img src="../../img/img2.jpg" alt="Unités de mesure" width="250" height="450"
+                    loading="lazy">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+
+        <a href="../policy_fra.html">Mentions légales</a>
+        <a href="../policy_fra.html">Politique en matière de cookies</a>
+
+    </footer>
+
+    <script>
+
+        document.getElementById("converterForm").addEventListener("submit", e => { e.preventDefault(); check(); });
+
+        let units = [];
+        let translations = {};
+
+        // Carrega el JSON de llenguatge
+        fetch("../../../data/lang_fra.json")
+            .then(r => r.json())
+            .then(data => { translations = data.units; });
+
+        // Carrega el JSON
+        fetch("../../../data/units_data.json")
+            .then(r => r.json())
+            .then(data => {
+                units = data; // guarda el JSON globalment
+
+                // Filtra només les unitats de categoria "force"
+                const forceUnits = data.filter(x => x.category === "force");
+
+                // Extreu els noms únics
+                const unitNames = [...new Set(forceUnits.map(x => x.from))];
+
+                unitNames.sort();
+
+                const select1 = document.getElementById("force1");
+                const select2 = document.getElementById("force2");
+
+                unitNames.forEach(u => {
+                    select1.innerHTML += `<option value="${u}">${translations[u]}</option>`;
+                    select2.innerHTML += `<option value="${u}">${translations[u]}</option>`;
+                });
+            });
+
+
+        function check() {
+
+            const unit1 = document.getElementById("force1").value;
+            const unit2 = document.getElementById("force2").value;
+
+            const value = parseFloat(document.getElementById("text").value);
+
+            if (isNaN(value)) {
+                document.getElementById("results").innerHTML = "Veuillez saisir un numéro valide.";
+                return;
+            }
+
+            const entry = units.find(x => x.from === unit1 && x.to === unit2);
+
+            if (!entry) {
+                document.getElementById("results").innerHTML = "Conversion introuvable.";
+                return;
+            }
+
+            const factor = entry.factor;
+            const offset = entry.offset || 0;
+
+            const result = value * factor + offset;
+
+            document.getElementById("results").innerHTML =
+                `${value} ${translations[unit1].toUpperCase()} = ${result} ${translations[unit2].toUpperCase()}`;
+        }
+
+    </script>
+</body>
+
+</html>

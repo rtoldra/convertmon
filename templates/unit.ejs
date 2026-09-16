@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/unit_conversion.css">
+  <link rel="icon" href="/img/CM.png" type="image/png">
+
+  <title>
+    <%= translations.categories[conversion.category] %>
+  </title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="languages">
+      <a href="/cat/unit/<%= conversion.path %>">Català</a>
+      <a href="/eng/unit/<%= conversion.path %>">English</a>
+      <a href="/por/unit/<%= conversion.path %>">Português</a>
+      <a href="/fra/unit/<%= conversion.path %>">Français</a>
+      <a href="/esp/unit/<%= conversion.path %>">Español</a>
+    </nav>
+
+    <div class="title">
+      <h1><a href="/<%= lang %>/index_<%= lang %>.html">CONVERTMON</h1>
+    </div>
+
+    <div class="title_family">
+      <h2>
+        <%= translations.categories[conversion.category].toUpperCase() %>
+      </h2>
+    </div>
+
+    <div class="subtitle">
+      <h2>
+        <%= translations.ui.convert %>
+        <%= translations.units[conversion.from].toUpperCase() %>
+        <%= translations.ui.to %>
+        <%= translations.units[conversion.to].toUpperCase() %>
+      </h2>
+    </div>
+
+    <div class="reverse">
+      <a href="/<%= lang %>/unit/<%= conversion.to %>-<%= conversion.from %>">
+        <%= translations.ui.convert %>
+        <%= translations.units[conversion.to].toUpperCase() %>
+        <%= translations.ui.to %>
+        <%= translations.units[conversion.from].toUpperCase() %>
+      </a>
+    </div>
+
+  </header>
+
+  <div class="father">
+
+    <main>
+      <form>
+        <input type="text" id="text">
+        <button onclick="check(); return false;">
+          <%= translations.ui.convert %>
+        </button>
+      </form>
+
+      <div id="results"></div>
+
+      <div id="image1">
+        <img src="/img/img1.jpg" alt="Units of measurement illustration" width="650" height="200" loading="lazy">
+      </div>
+
+    </main>
+
+    <aside class="column">
+      <ul>
+        <% Object.keys(families).forEach(cat => { %>
+          <li>
+            <a href="/<%= lang %>/categories/convert<%= translations.convertcategories[cat] %>.html">
+              <%= translations.categories[cat] %>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+    </aside>
+
+    <div id="image2">
+      <img src="/img/img2.jpg" alt="Units of measurement illustration" width="250" height="450" loading="lazy">
+    </div>
+
+    <footer>
+
+      <a href="/<%= lang %>/policy_<%= lang %>.html"><%= translations.ui.legal %></a>
+      <a href="/<%= lang %>/policy_<%= lang %>.html"><%= translations.ui.cookies %></a>
+
+    </footer>
+
+  </div>
+
+  <script>
+    const conversion = <%- JSON.stringify(conversion) %>;
+
+    function check() {
+      const value = parseFloat(document.getElementById("text").value);
+
+      if (isNaN(value)) {
+        document.getElementById("results").innerHTML = "<%= translations.ui.invalid_number %>";
+        return;
+      }
+
+      const factor = conversion.factor;
+      const offset = conversion.offset || 0;
+
+      const result = value * factor + offset;
+
+      document.getElementById("results").innerHTML =
+        value + " " + "<%= translations.units[conversion.from].toUpperCase() %>" +
+        " = " +
+        result + " " + "<%= translations.units[conversion.to].toUpperCase() %>";
+    }
+  </script>
+
+</body>
+
+</html>
