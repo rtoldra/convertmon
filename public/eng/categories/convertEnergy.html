@@ -11,6 +11,8 @@
     <link rel="alternate" hreflang="pt" href="../../por/categories/convertEnergy.html">
     <link rel="alternate" hreflang="fr" href="../../fra/categories/convertEnergy.html">
     <link rel="alternate" hreflang="es" href="../../esp/categories/convertEnergy.html">
+    <meta name="description"
+        content="Free energy unit converter. Convert calories, joules, watt-seconds, and many other units.">
     <title>Convertmon - Energy</title>
 
 </head>
@@ -36,9 +38,9 @@
 
     </header>
 
-    <div class="father">
+    <div class="fatherCategories">
 
-        <main>
+        <main class="mainCategories">
 
             <form id="converterForm">
 
@@ -63,7 +65,7 @@
 
         </main>
 
-        <div class="column">
+        <div class="columnCategories">
             <aside id="lateral">
                 <nav>
                     <ul id="menu">
@@ -95,8 +97,10 @@
 
     <footer>
 
-        <a href="../policy_eng.html">Legal Info</a>
-        <a href="../policy_eng.html">Cookie Policy</a>
+        <!-- <a href="policy_eng.html">Legal Info</a>
+        <a href="policy_eng.html">Cookie Policy</a> -->
+        <a href="policy_eng.html"></a>
+        <a href="policy_eng.html"></a>
 
     </footer>
 
@@ -108,12 +112,12 @@
         let translations = {};
 
         // Carrega el JSON de llenguatge
-        fetch("../../../data/lang_eng.json")
+        fetch("/data/lang_eng.json")
             .then(r => r.json())
             .then(data => { translations = data.units; });
 
         // Carrega el JSON
-        fetch("../../../data/units_data.json")
+        fetch("/data/units_data.json")
             .then(r => r.json())
             .then(data => {
                 units = data; // guarda el JSON globalment

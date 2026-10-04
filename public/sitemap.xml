@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- PÀGINES PRINCIPALS -->
+
+  <url>
+    <loc>https://convertmon.com/eng/index_eng.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/index_eng.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/index_cat.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/index_esp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/index_fra.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/index_por.html"/>
+  </url>
+
+  <url>
+    <loc>https://convertmon.com/cat/index_cat.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/index_cat.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/index_eng.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/index_esp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/index_fra.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/index_por.html"/>
+  </url>
+
+  <url>
+    <loc>https://convertmon.com/esp/index_esp.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/eng/index_esp.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/esp/index_eng.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/index_cat.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/index_fra.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/index_por.html"/>
+  </url>
+
+  <url>
+    <loc>https://convertmon.com/fra/index_fra.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/index_fra.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/index_eng.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/index_cat.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/index_esp.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/index_por.html"/>
+  </url>
+
+  <url>
+    <loc>https://convertmon.com/por/index_por.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/index_por.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/index_eng.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/index_cat.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/index_esp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/index_fra.html"/>
+  </url>
+
+  <!-- CATEGORIES (ÀREA, FORÇA, ENERGIA, ETC.) -->
+  <!-- Repetim el patró per cada categoria -->
+
+  <!-- ÀREA -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertArea.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertArea.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertArea.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertArea.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertArea.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertArea.html"/>
+  </url>
+
+  <!-- AMPLE DE BANDA -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertBandwidth.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertBandwidth.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertBandwidth.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertBandwidth.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertBandwidth.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertBandwidth.html"/>
+  </url>
+
+  <!-- EMMAGATZEMATGE DE DADES -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertComputerDataStorage.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertComputerDataStorage.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertComputerDataStorage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertComputerDataStorage.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertComputerDataStorage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertComputerDataStorage.html"/>
+  </url>
+
+  <!-- INTENSITAT ELÈCTRICA -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertElectricCurrent.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertElectricCurrent.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertElectricCurrent.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertElectricCurrent.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertElectricCurrent.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertElectricCurrent.html"/>
+  </url>
+
+  <!-- ENERGIA -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertEnergy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertEnergy.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertEnergy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertEnergy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertEnergy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertEnergy.html"/>
+  </url>
+
+  <!-- FORÇA -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertForce.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertForce.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertForce.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertForce.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertForce.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertForce.html"/>
+  </url>
+
+  <!-- LONGITUD -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertLength.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertLength.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertLength.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertLength.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertLength.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertLength.html"/>
+  </url>
+
+  <!-- PES -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertMass.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertMass.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertMass.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertMass.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertMass.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertMass.html"/>
+  </url>
+
+  <!-- PRESSIÓ -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertPressure.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertPressure.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertPressure.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertPressure.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertPressure.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertPressure.html"/>
+  </url>
+
+  <!-- VELOCITAT -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertSpeed.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertSpeed.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertSpeed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertSpeed.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertSpeed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertSpeed.html"/>
+  </url>
+
+  <!-- TEMPERATURA -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertTemperature.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertTemperature.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertTemperature.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertTemperature.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertTemperature.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertTemperature.html"/>
+  </url>
+
+  <!-- TEMPS -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertTime.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertTime.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertTime.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertTime.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertTime.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertTime.html"/>
+  </url>
+
+  <!-- TENSIÓ ELÈCTRICA -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertVoltage.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertVoltage.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertVoltage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertVoltage.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertVoltage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertVoltage.html"/>
+  </url>
+
+  <!-- VOLUM -->
+  <url>
+    <loc>https://convertmon.com/eng/categories/convertVolume.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://convertmon.com/eng/categories/convertVolume.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://convertmon.com/cat/categories/convertVolume.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://convertmon.com/esp/categories/convertVolume.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://convertmon.com/fra/categories/convertVolume.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://convertmon.com/por/categories/convertVolume.html"/>
+  </url>
+
+</urlset>

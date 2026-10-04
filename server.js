@@ -7,6 +7,12 @@ app.set("views", "./templates");
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
+app.use('/data', express.static('data'));
+
+app.get('/', (req, res) => {
+  res.redirect('/eng/index_eng.html');
+});
+
 
 // Carrega dades de conversió (ara TOT està aquí)
 const unitsData = JSON.parse(fs.readFileSync("./data/units_data.json", "utf8"));

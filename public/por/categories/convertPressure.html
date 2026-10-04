@@ -11,6 +11,8 @@
     <link rel="alternate" hreflang="pt" href="../../por/categories/convertPressure.html">
     <link rel="alternate" hreflang="fr" href="../../fra/categories/convertPressure.html">
     <link rel="alternate" hreflang="es" href="../../esp/categories/convertPressure.html">
+    <meta name="description"
+        content="Conversor de unidades de pressão gratuito. Converte atmosferas, pascais, torres e muitas outras unidades.">
     <title>Convertmon - Pressão</title>
 
 </head>
@@ -36,9 +38,9 @@
 
     </header>
 
-    <div class="father">
+    <div class="fatherCategories">
 
-        <main>
+        <main class="mainCategories">
 
             <form id="converterForm">
 
@@ -63,7 +65,7 @@
 
         </main>
 
-        <div class="column">
+        <div class="columnCategories">
             <aside id="lateral">
                 <nav>
                     <ul id="menu">
@@ -95,8 +97,10 @@
 
     <footer>
 
-        <a href="../policy_por.html">Aviso legal</a>
-        <a href="../policy_por.html">Política de Cookies</a>
+        <!-- <a href="policy_por.html">Aviso legal</a>
+        <a href="policy_por.html">Política de Cookies</a> -->
+        <a href="policy_por.html"></a>
+        <a href="policy_por.html"></a>
 
     </footer>
 
@@ -108,12 +112,12 @@
         let translations = {};
 
         // Carrega el JSON de llenguatge
-        fetch("../../../data/lang_por.json")
+        fetch("/data/lang_por.json")
             .then(r => r.json())
             .then(data => { translations = data.units; });
 
         // Carrega el JSON
-        fetch("../../../data/units_data.json")
+        fetch("/data/units_data.json")
             .then(r => r.json())
             .then(data => {
                 units = data; // guarda el JSON globalment

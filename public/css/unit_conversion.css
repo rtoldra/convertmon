@@ -10,11 +10,11 @@ body {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: clamp(36px, 6vw, 70px);
 }
 
 h2 {
-    font-size: 5.5vmin;
+    font-size: clamp(24px, 4vw, 48px);
 }
 
 input {
@@ -22,14 +22,32 @@ input {
     font-weight: bolder;
 }
 
-.father {
+@media (max-width: 600px) {
+    .father {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        min-width: 100%;
+        padding: 10px;
+    }
+
+    .column {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+.fatherCategories {
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-main {
+.mainCategories {
     height: 850px;
     flex: 150px;
     display: grid;
@@ -40,7 +58,7 @@ main {
 
 }
 
-.column {
+.columnCategories {
     height: 1000px;
     flex: 150px;
     display: grid;
@@ -112,7 +130,7 @@ ul {
 #results {
     margin-top: 5%;
     margin-bottom: 20%;
-    height: 450px;
+    height: 400px;
     width: 65%;
     font-size: 6.5vmin;
     font-weight: bold;
@@ -141,8 +159,6 @@ footer a {
     width: 60%;
     justify-content: center;
     display: flex;
-    flex: 150px;
-    margin-top: 20px;
 }
 
 #image2 {
